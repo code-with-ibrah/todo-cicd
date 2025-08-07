@@ -1,0 +1,25 @@
+{
+  "name": "todo-cicd",
+  "version": "1.0.0",
+  "description": "Simple todo with github actions (cicd)",
+  "main": "app.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.mjs"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-with-ibrah/todo-cicd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/code-with-ibrah/todo-cicd/issues"
+  },
+  "homepage": "https://github.com/code-with-ibrah/todo-cicd#readme"
+}
