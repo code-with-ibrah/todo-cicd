@@ -15,6 +15,7 @@ app.get("/", (req, res) => {
 
 
 app.get("/:id", (req, res) => {
+    return req.params.id;
 
     const records = dataList().find(data => data.id === req.params.id);
     return res.send(records);
