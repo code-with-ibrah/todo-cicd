@@ -1,6 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-const {dataStore} = require("./dataStore");
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -10,19 +9,37 @@ const port = 3500;
 
 
 app.get("/", (req, res) => {
+    const records = dataList();
+    return res.send(records);
+})
 
-    console.log(dataList());
 
-    return res.send("asdfsad");
+app.get("/:id", (req, res) => {
+
+    const records = dataList().find(data => data.id === req.params.id);
+    return res.send(records);
+})
+
+
+app.get("/search-name/:keyword", (req, res) => {
+    const records =  dataList().filter(data => data.name.indexOf(req.params.keyword));
+    return res.send(records);
 })
 
 
 
 
-
-
-
 app.listen(port, () => {console.log("Server is running on port: http://localhost:" + port)});
+
+
+
+
+
+
+
+
+
+
 
 
 
